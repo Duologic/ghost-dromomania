@@ -1,0 +1,11 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: ghost-dromomania
+  namespace: default
+spec:
+  chart:
+    path: kubernetes/releases/ghost-dromomania
+    git: git@github.com:duologic/ghost-dromomania.git
+    releaseName: ghost-dromomania

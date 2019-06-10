@@ -1,0 +1,11 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: nginx-ingress
+  namespace: default
+spec:
+  chart:
+    path: stable/nginx-ingress
+    git: git@github.com:helm/charts.git
+    releaseName: nginx-ingress
