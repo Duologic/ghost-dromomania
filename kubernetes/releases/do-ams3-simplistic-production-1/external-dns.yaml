@@ -1,0 +1,20 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: external-dns
+  namespace: default
+spec:
+  chart:
+    path: stable/external-dns
+    git: git@github.com:helm/charts.git
+    releaseName: external-dns
+  values:
+    rbac:
+      create: true
+    digitalocean:
+      apiToken: "a"
+    provider: digitalocean
+    interval: "1m"
+    policy: sync # or upsert-only
+    domainFilters: [ "dromomania.be" ]
