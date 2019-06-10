@@ -13,3 +13,10 @@ spec:
     volume:
       enabled: true
       pvClaimName: ghost-content-pv-claim
+    ingress:
+      enabled: true
+      annotations:
+        kubernetes.io/ingress.class: nginx
+      hosts:
+        - host: dromomania.be
+          paths: ["/"]
