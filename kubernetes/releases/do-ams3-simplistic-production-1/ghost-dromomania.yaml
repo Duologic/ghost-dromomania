@@ -9,4 +9,7 @@ spec:
     path: kubernetes/charts/ghost
     git: git@github.com:duologic/ghost-dromomania.git
     releaseName: ghost-dromomania
-  pv-claim-name: ghost-content-pv-claim
+  values:
+    volume:
+      enabled: true
+      pvClaimName: ghost-content-pv-claim

@@ -13,7 +13,9 @@ image:
 imagePort: 2368
 
 # If you have some PersistenVolumeClaim, but the name here
-pvClaimName: ""
+volume:
+  enabled: false
+  pvClaimName: ""
 
 nameOverride: ""
 fullnameOverride: ""
