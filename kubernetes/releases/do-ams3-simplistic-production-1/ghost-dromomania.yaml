@@ -6,6 +6,6 @@ metadata:
   namespace: default
 spec:
   chart:
-    path: kubernetes/releases/ghost-dromomania
+    path: kubernetes/charts/ghost
     git: git@github.com:duologic/ghost-dromomania.git
     releaseName: ghost-dromomania
