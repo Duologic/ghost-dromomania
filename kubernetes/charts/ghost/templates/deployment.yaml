@@ -23,13 +23,15 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+        {{- if .Values.pvClaimName -}}
           volumeMounts:
             - mountPath: /var/lib/ghost/content
               name: ghost-content-volume
+        {{- end }}
           ports:
             - name: http
               port: 80
-              containerPort: {{ .Values.image_port }}
+              containerPort: {{ .Values.imagePort }}
               protocol: TCP
           livenessProbe:
             httpGet:
@@ -53,7 +55,9 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
+    {{- if .Values.pvClaimName -}}
       volumes:
         - name: ghost-content-volume
           persistentVolumeClaim:
-            claimName: ghost-content-pv-claim
+            claimName: "{{ .Values.pvClaimName }}"
+    {{- end }}

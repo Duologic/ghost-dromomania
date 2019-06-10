@@ -3,6 +3,8 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: ghost-content-pv-claim
+  labels:
+    helm.sh/resource-policy: keep
 spec:
   accessModes:
     - ReadWriteOnce

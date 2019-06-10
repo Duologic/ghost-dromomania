@@ -10,7 +10,10 @@ image:
   pullPolicy: IfNotPresent
 
 # The port ghost is exposed on
-image_port: 2368
+imagePort: 2368
+
+# If you have some PersistenVolumeClaim, but the name here
+pvClaimName: ""
 
 nameOverride: ""
 fullnameOverride: ""
