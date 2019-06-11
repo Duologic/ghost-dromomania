@@ -17,6 +17,7 @@ spec:
     ghostBlogTitle: Dromomania
     ghostProtocol: https
     ghostPort: 80
+    ghostPath: ""
     allowEmptyPassword: "false"
     persistence:
       storageClass: do-block-storage
