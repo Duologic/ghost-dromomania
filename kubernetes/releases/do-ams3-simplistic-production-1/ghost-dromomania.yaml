@@ -16,6 +16,7 @@ spec:
     ghostEmail: dromomania@simplistic.be
     ghostBlogTitle: Dromomania
     ghostProtocol: https
+    allowEmptyPassword: "false"
     persistence:
       storageClass: do-block-storage
     resources:
@@ -26,6 +27,8 @@ spec:
       enabled: true
       persistence:
         storageClass: do-block-storage
+    service:
+      type: ClusterIP
     ingress:
       enabled: true
       annotations:
