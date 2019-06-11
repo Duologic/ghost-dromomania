@@ -6,13 +6,21 @@ metadata:
   namespace: default
 spec:
   chart:
-    path: kubernetes/charts/ghost
-    git: git@github.com:duologic/ghost-dromomania.git
+    repository: https://charts.bitnami.com
+    name: ghost
+    version: 6.7.19
     releaseName: ghost-dromomania
   values:
-    volume:
+    ghostHost: dromomania.be
+    ghostUsername: dromomania
+    ghostEmail: dromomania@simplistic.be
+    ghostBlogTitle: Dromomania
+    persistence:
+      storageClass: do-block-storage
+    mariadb:
       enabled: true
-      pvClaimName: ghost-content-pv-claim
+      persistence:
+        storageClass: do-block-storage
     ingress:
       enabled: true
       annotations:
