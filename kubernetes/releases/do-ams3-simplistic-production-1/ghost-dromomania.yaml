@@ -6,9 +6,9 @@ metadata:
   namespace: default
 spec:
   chart:
-    repository: https://charts.bitnami.com
-    name: ghost
-    version: 6.7.19
+    path: stable/ghost
+    git: git@github.com:Duologic/charts.git
+    ref: b6f9cdd
     releaseName: ghost-dromomania
   values:
     ghostHost: dromomania.be
