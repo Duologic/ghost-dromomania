@@ -16,7 +16,7 @@ spec:
     ghostEmail: dromomania@simplistic.be
     ghostBlogTitle: Dromomania
     ghostProtocol: https
-    ghostPort: 80
+    ghostPort: 443
     ghostPath: ""
     allowEmptyPassword: "false"
     persistence:
