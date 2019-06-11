@@ -29,6 +29,7 @@ spec:
         storageClass: do-block-storage
     service:
       type: ClusterIP
+      port: 80
     ingress:
       enabled: true
       annotations:
