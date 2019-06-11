@@ -8,4 +8,9 @@ spec:
   chart:
     path: stable/nginx-ingress
     git: git@github.com:helm/charts.git
+    ref: f1e7a98
     releaseName: nginx-ingress
+  values:
+    controller:
+      publishService:
+        enabled: true

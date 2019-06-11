@@ -8,6 +8,7 @@ spec:
   chart:
     path: stable/external-dns
     git: git@github.com:helm/charts.git
+    ref: f1e7a98
     releaseName: external-dns
   values:
     rbac:
