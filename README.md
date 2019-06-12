@@ -4,17 +4,17 @@ This repo contains Kubernetes configuration setting up a Ghost blog for [Dromoma
 
 ## Repo structure
 
-* `kubernetes/`: configuration for Kubernetes using Helm and the Flux Helm Operator.
-* `terraform/`: bootstrap the k8s cluster with Terraform
+* `kubernetes/` [Managing Helm releases the GitOps way](https://www.weave.works/blog/managing-helm-releases-the-gitops-way).
+* `terraform/` Bootstrap the k8s cluster with Terraform on Digital Ocean
 
 ## Requirements
 
 Install these tools with your favorite package manager:
 
-* terraform
-* doctl
-* kubectl
-* helm
+* `terraform`
+* `doctl`
+* `kubectl`
+* `helm`
 
 You should have a Digital Ocean API token available for `doctl` and `terraform`.
 
@@ -40,7 +40,7 @@ This should bootstrap the environment, Flux takes care of the deployment.
 
 ```
 
-We didn't include the DO api token in source for obvious security reasons, so we still have to change that in the cluster.
+I didn't include the DO API token in source for obvious security reasons, so it still has to be changed in the cluster.
 
 ```bash
     echo -n $DIGITALOCEAN_API_TOKEN | base64 | pbcopy
