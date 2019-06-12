@@ -54,11 +54,23 @@ Finally you want to login on the blog, so you need a password.
     kubectl get secrets default-ghost-dromomania -o yaml | grep ghost-password | awk -F' ' '{ print $2 }' | base64 -D | pbcopy
 ```
 
-Now go to [https://dromomania.be](https://dromomania.be) and login with dromomania@simplistic.be and the password on your clipboard.
+Now go to [https://dromomania.be/](https://dromomania.be/) and login with dromomania@simplistic.be and the password on your clipboard.
 
-## Credit
+## Credits
 
 The kubernetes/flux config is based on [https://github.com/travis-ci/kubernetes-config](https://github.com/travis-ci/kubernetes-config).
+
+Charts:
+
+* [ghost](https://hub.helm.sh/charts/bitnami/ghost)
+* [cert-manager](https://hub.helm.sh/charts/jetstack/cert-manager)
+* [external-dns](https://hub.helm.sh/charts/stable/external-dns)
+* [nginx-ingress](https://hub.helm.sh/charts/stable/nginx-ingress)
+
+Tutorials:
+
+* [How To Set Up an Nginx Ingress on DigitalOcean Kubernetes Using Helm](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nginx-ingress-on-digitalocean-kubernetes-using-helm)
+* [How To Automatically Manage DNS Records From DigitalOcean Kubernetes Using ExternalDNS](https://www.digitalocean.com/community/tutorials/how-to-automatically-manage-dns-records-from-digitalocean-kubernetes-using-externaldns)
 
 ## License
 
