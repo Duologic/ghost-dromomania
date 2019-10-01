@@ -8,7 +8,7 @@ spec:
   chart:
     path: stable/ghost
     git: git@github.com:Duologic/charts.git
-    ref: b6f9cdd
+    ref: 94d6a55
     releaseName: ghost-dromomania
   values:
     ghostHost: dromomania.be
