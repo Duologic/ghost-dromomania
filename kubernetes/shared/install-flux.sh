@@ -4,8 +4,8 @@ NAMESPACE=$(kubectl config current-context)
 
 BRANCH="master"
 
-helm repo add weaveworks https://weaveworks.github.io/flux
-helm upgrade flux weaveworks/flux \
+helm repo add fluxcd https://charts.fluxcd.io
+helm upgrade flux fluxcd/flux \
   --install \
   --set rbac.create=true \
   --set helmOperator.create=true \
